@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>security system</title>
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+     <!-- Icon Font Stylesheet -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+     <!-- Libraries Stylesheet --> 
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-32x32.png">
+     <!-- رابط مكتبة Font Awesome للحصول على الأيقونات -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+  <style>
+    /* تصميم الحاوية */
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* تصميم مربع الإدخال */
+    #search-bar {
+      flex: 1;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      outline: none;
+      color: #333;
+      background: transparent;
+    }
+
+    /* تصميم زر البحث */
+    #search-button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #search-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* تصميم الأيقونة */
+    #search-button i {
+      pointer-events: none; /* منع النقر على الأيقونة نفسها */
+    }
+
+    /* لإخفاء الحدود الداخلية على الأجهزة المحمولة */
+    #search-bar::placeholder {
+      color: #aaa;
+    }
+    /* تصميم الأيقونات */
+    .icon-button {
+      background-color: transparent;
+      border: none;
+      color: #007bff;
+      font-size: 1.5rem;
+      padding: 5px;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icon-button:hover {
+      color: #0056b3;
+      transform: scale(1.2);
+    }
+
+    /* Placeholder */
+    #search-bar::placeholder {
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="container-fluid fixed-top">
+        <div class="container topbar bg-primary d-none d-lg-block">
+            <div class="d-flex justify-content-between">
+                <div class="top-info ps-2">
+                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Elmansoura</a></small>
+                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">nouradel1682008@gmail.com</a></small>
+                </div>
+                <div class="top-link pe-2">
+                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Security System</h1></a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a href="#conts1" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">about</a>
+                        <a href="#container3" class="nav-item nav-link">image gallery</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <a href="#menu" class="dropdown-item">product</a>
+                                <a href="#testimonial-section" class="dropdown-item">Testimonial</a>
+                                <a href="#contact" class="dropdown-item">contact</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex m-3 me-0">
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                        <a href="#" class="position-relative me-4 my-auto">
+                            <i   style="color: #007bff;" class="fa fa-shopping-bag fa-2x"></i>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                        </a>
+                        <a href="#" class="my-auto">
+                            <i style="color: #007bff;" class="fas fa-user fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Modal Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-12 col-lg-7">
+                    <h4 class="mb-3 text-secondary">100% security system</h4>
+                    <h1 class="mb-5 display-3 text-primary " style="font-family:Arial, Helvetica, sans-serif; font-weight: bold;">Your safety is our priority  your trust is our success </h1>
+                    <div class="position-relative mx-auto">
+                        <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
+                        <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active rounded">
+                                <img src="img/header2.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="img/intergration.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                               
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="img/advanced6.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                               
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <section id="conts1">
+        <h2 class="shiny-text"> high resolution,unlimited security
+
+</h2>
+    <div class="cont">
+      
+      <img src="img/gallery1.jpg" alt="">
+      <img src="img/gallery2.jpg" alt="">
+      <img src="img/gallery3.jpg" alt="">
+      <img src="img/gallery4.jpg" alt="">
+      <img src="img/gallery5.jpg" alt="">
+      <img src="img/gallery 6.jpg" alt="">
+      <img src="img/gallery7.jpg" alt="">
+
+
+</div>
+
+   </section>
+   <!-- end image gallery -->
+
+    <main>
+        <!-- About Section Start -->
+        <section id="about">
+            <div class="container">
+                <div class="title">
+                    <h2>Network security</h2>
+                    <p>More than18 + years of experience</p>
+                </div>
+                <div class="about-content">
+                    <div>
+                        <p>Hikvision’s network security is one of the most prominent and robust systems
+                             designed to protect information and secure systems against increasing and evolving threats. 
+                             Hikvision focuses on developing integrated security solutions to protect networks from breaches
+                              and cyberattacks through the latest technologies and security tools, such as advanced firewalls,
+                               intelligent threat prevention software, 
+                            and high-level encryption techniques.</p>
+                        <a href="#" class="btn btn-secondary">LEARN MORE</a>
+                    </div>
+                    <img src="img/network security.jpg" alt="">
+                </div>
+            </div>
+        </section>
+       
+        <!-- About Section End -->
+
+        <!-- technology -->
+         <section>
+            <h1>technologies and innovations </h1>
+    <div class="container2">
+       
+        <div class="blog">
+            <img src="img/gallery4.jpg" alt="" width="500px" >
+            <br>
+            <button>how_to</button>
+            <h2>smart cameras</h2>
+            <p>The company uses high-definition surveillance cameras equipped <br> with night vision technology,
+                 artificial intelligence,
+                
+            and the ability to recognize people and objects..</p>
+                 <div class="icon">
+          
+       <a href="#">read</a>
+         <i class="fa fa-arrow-right"></i>
+        </div>
+        </div>
+    
+    
+        <div class="blog">
+            <img src="img/cloud.jpg" alt="" width="500px">
+            <br>
+            <button>blog</button>
+            <h2> cloud storage </h2>
+           <p>Hikvision provides cloud storage solutions that ensure security and easy access
+             to data from anywhere in the world,<br>
+            
+            increasing the flexibility of the system.
+        </p>
+        <div class="icon">
+          
+       <a href="#">read</a>
+         <i class="fa fa-arrow-right"></i>
+        </div>
+         
+
+      
+        </div>
+    
+    
+        <div class="blog">
+            <img src="img/intergration.jpg" alt="" width="500px">
+            <br>
+            <button>blog</button>
+            <h2> integration with other systems</h2>
+            <p>.Hikvision continues to innovate security solutions that  can be integrated with other systems
+                , such as access control systems and alarm devices, <br>
+                to ensure comprehensive protection.</p>
+                 <div class="icon">
+          
+       <a href="#">read</a>
+         <i class="fa fa-arrow-right"></i>
+        </div>
+        </div>
+    
+    
+    </div>
+         </section>
+         <!-- thr end technolgy -->
+
+        <!-- Menu Section Start -->
+        <section id="menu">
+            <div class="container">
+                <div class="title">
+                    <h2>my product </h2>
+                    <p>"Explore a range of advanced solutions offered by Hikvision to ensure the highest levels of 
+                        security and protection for your various needs."</p>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-items-left">
+                        <div class="menu-item">
+                            <img src="img/images (1).jpeg" alt="LASAL Cheese">
+                            <div>
+                                <h3>DS-2CD2143G0-I<span class="primary-text">$18.00</span></h3>
+                                <p>A compact camera with 4MP resolution and excellent night vision.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/download (4).jpeg" alt="JUMBO CRAB SHRIMP">
+                            <div>
+                                <h3>DS-2DE4425IW-DE <span class="primary-text">$24.00</span></h3>
+                                <p>A PTZ camera with 4MP resolution, capable of pan and tilt for comprehensive coverage.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/download (5).jpeg" alt="KOKTAIL JUCIE">
+                            <div>
+                                <h3>DS-2CD2387G2-L <span class="primary-text">$12.00</span></h3>
+                                <p>. A fixed camera with 8MP resolution, featuring artificial intelligence and image enhancemen</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/images (2).jpeg" alt="CAPO STEAK">
+                            <div>
+                                <h3>DS-2CD2135F-I <span class="primary-text">$60.00</span></h3>
+                                <p>A 3MP camera equipped with H.265 technology to reduce data size.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/image6.jpg" alt="ORGANIC FRUIT SALAD">
+                            <div>
+                                <h3>DS-2CD6425FWD-IZ <span class="primary-text">$8.00</span></h3>
+                                <p>A small camera with a wide-angle and 4MP resolution, featuring optical zoom.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/images (5).jpeg" alt="CHEESE PIZZA">
+                            <div>
+                                <h3>DS-2CD2043G0-I <span class="primary-text">$18.00</span></h3>
+                                <p>A compact camera with 4MP resolution supporting smart night vision.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-items-right">
+                        <div class="menu-item">
+                            <img src="img/image7.jpg" alt="KOFTA MEAT">
+                            <div>
+                                <h3>DS-2CE16D0T-IRP<span class="primary-text">$40.00</span></h3>
+                                <p>A fixed 8MP camera equipped with artificial intelligence for video analysis.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/image11.jpg" alt="SPANISH PIES">
+                            <div>
+                                <h3>DS-2CD3135F-I<span class="primary-text">$14.00</span></h3>
+                                <p>A compact 3MP camera with a small design and high efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/images (10).jpeg" alt="CHEESE TOST">
+                            <div>
+                                <h3>DS-2CD2087G2-L <span class="primary-text">$6.00</span></h3>
+                                <p>A fixed 8MP camera equipped with artificial intelligence for video analysis.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/image7.jpg" alt="FRUIT SALAD">
+                            <div>
+                                <h3>DS-2DE4420IW-AE <span class="primary-text">$14.00</span></h3>
+                                <p>A 2MP PTZ camera with horizontal and vertical motors for high flexibility.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/images (9).jpeg" alt="CHICKEN SHAWARMA">
+                            <div>
+                                <h3>DS-2CD2085FWD-I<span class="primary-text">$20.00</span></h3>
+                                <p>An 8MP camera with night vision technology and video compression features.</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/image8.jpg" alt="MEGA CHEESE PIZZA">
+                            <div>
+                                <h3>DS-2CE16D0T-VFIT <span class="primary-text">$30.00</span></h3>
+                                <p>. A high-definition surveillance camera supporting night vision and flexible installation.</p>
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+                <button class="btn btn-third"><a href="#">buy now!</a></button>
+            </div>
+        </section>
+        <!-- Menu Section End -->
+              
+
+        <!-- testimonial -->
+        <div class="testimonial-section" id="testimonial-section">
+            <h2 class="testimonial-heading">Testimonial</h2>
+            <div class="testimonials">
+                <!-- Customer One -->
+                <div class="testimonial-box">
+                    <img src="img/customer1.jpg" alt="Customer One" class="customer-img">
+                    <h3>Customer One</h3>
+                    <p class="stars">★★★★★</p>
+                    <p>The camera delivers excellent performance and high image quality, with the ability to 
+                        adapt to low light. Easy installation and remote control via the app make it an ideal 
+                        choice for users looking for security and convenience."</p>
+                </div>
+                <!-- Customer Two -->
+                <div class="testimonial-box">
+                    <img src="img/customer2.jpg" alt="Customer Two" class="customer-img">
+                    <h3>Customer Two</h3>
+                    <p class="stars">★★★★☆</p>
+                    <p>"The camera provides comprehensive coverage and performs efficiently in
+                         various conditions. With smart alert features and cloud storage, 
+                        it is an excellent option for maintaining security at home or work."</p>
+                </div>
+                <!-- Customer Three -->
+                <div class="testimonial-box">
+                    <img src="img/customer3.jpg" alt="Customer Three" class="customer-img">
+                    <h3>Customer Three</h3>
+                    <p class="stars">★★★★★</p>
+                    <p>The camera provides excellent image quality with high clarity, even in low light.
+                         It is extremely easy to install, and remote control via the app offers great convenience 
+                         for users. The camera performs excellently in all weather conditions, 
+                        making it an ideal choice for home security."</p>
+                </div>
+            </div>
+        </div>
+
+<!-- end testimonial -->
+
+
+
+         <section>
+            <section id="container3">
+                <h2 style="text-align: center">discover advanced security solutions</h2>
+                <div class="cont2">
+                 
+                <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced1.jpg" alt="" width="300px">
+
+                    <div class="layer">
+                      <h3>water and dust resistant</h3>
+                      <p>Durable design to withstand all weather conditions.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+                  
+                      <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced2.jpg" alt="" width="300px">
+                    <div class="layer">
+                      <h3>high resolution</h3>
+                      <p>Sharp details with up to 8-megapixel resolution.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                      </div>
+                      <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced3.jpg" alt="" width="300px">
+                    <div class="layer">
+                      <h3> ai technology</h3>
+                      <p>Intelligent video analysis for rapid threat detection.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                      </div>
+                  
+                      <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced4.jpg" alt="" width="300px">
+                    <div class="layer">
+                      <h3>wide -angle coverage</h3>
+                      <p>Ideal for covering large areas with fewer cameras.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                      </div>
+                  
+                      <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced5.jpg" alt="" width="300px">
+                    <div class="layer">
+                      <h3>smart motion detection</h3>
+                      <p>Alert system for unusual activity detection.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                      </div>
+                  
+                      <div class="projects">
+                  
+                  
+                  <div class="project">
+                    <img src="img/advanced6.jpg" alt="" width="300px">
+                    <div class="layer">
+                      <h3>easy and quick installation</h3>
+                      <p>Flexible design that can be mounted anywhere.</p>
+                         <i class="fa fa-arrow-right"></i>
+                      
+                    </div>
+                    
+                  </div>
+                      </div>
+                  
+            
+                  
+                  
+                </div>
+                  
+                  
+                </div>
+                
+              </section>
+
+
+
+        <!-- Contact Section Start -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div>
+                            <h3>ADDRESS</h3>
+                            <p><i class="fa-solid fa-location-dot"></i> Hosary Mosque, 6 October, Egypt</p>
+                            <p><i class="fa-solid fa-phone"></i> Phone: 123-456-789</p>
+                            <p><i class="fa-regular fa-envelope"></i> support@Systems Security.com</p>
+                        </div>
+                        <div>
+                            <h3>WORKING HOURS</h3>
+                            <p>8:00 am to 11:00 pm on Weekdays</p>
+                            <p>11:00 am to 1:00 Am on Weekends</p>
+                        </div>
+                        <div>
+                            <h3>FOLLOW US</h3>
+                            <a href="#"><i class="fa-brands fa-facebook-f face"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form>
+                        <input type="text" name="Name" id="name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn-third">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </main>
+<!-- footer -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Reservation</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i  style="color: #0056b3;"class="fa fa-map-marker-alt me-3"></i>Elmansoura</p>
+                        <p class="mb-2"><i  style="color: #0056b3;"class="fa fa-phone-alt me-3"></i>+01023832178</p>
+                        <p class="mb-2"><i style="color: #0056b3;" class="fa fa-envelope me-3"></i>nouradel1682008@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/nour_3del55/"><i style="color: #0056b3;" class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/share/1KEY7ShVUY/"><i  style="color: #0056b3;"class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i  style="color: #0056b3;"class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/nour-adel-95058530a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i  style="color: #0056b3;"class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
+                        <p>09AM - 09PM</p>
+                        <h5 class="text-light fw-normal">Sunday</h5>
+                        <p>10AM - 08PM</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, security system 
+						
+                    
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">camera</a>
+                                <a href="">Help</a>
+                                <a href="">contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+
+
+
+
+        <style>
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(241, 238, 238, 0.1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+        </style>
+
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+   
+    <button id="backToTop" class="back-to-top  border-3 border-primary rounded-circle " title="Back to Top">↑</button>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
